@@ -1,11 +1,11 @@
-import Cards from "./Cards/Cards";
+import Cardtable from "./Cards/Cardtable";
 import Header from "./Header/Header";
 
 export default function Screentop() {
   return (
     <div>
       <Header />
-      <Cards />
+      <Cardtable />
     </div>
   );
 }

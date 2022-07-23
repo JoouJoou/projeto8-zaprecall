@@ -4,9 +4,12 @@ html {
 body {
   background-color: #fb6b6b;
   font-family: "Righteous", cursive;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 
 .root {
-  height: 100vh;
+  height: 100%;
+  top: 0;
 }

@@ -19,10 +19,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5.1rem;
+  margin: 5.1rem;
   gap: 2.5rem;
 }
 
 .cardTable img {
   cursor: pointer;
+}
+
+.question {
+  height: 13.1rem;
+  background-color: #ffffd4;
+  flex-direction: column;
+  gap: 0;
+  justify-content: space-between;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.question-top {
+  margin-top: 1.8rem;
+  width: 95%;
+}
+
+.question img {
+  margin-bottom: 0.6rem;
+  left: 0;
+}
+
+.question-bottom {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
 }
