@@ -2,4 +2,7 @@ import Gamescreen from "./gamescreen/Gamescreen";
 import Startscreen from "./startscreen/Startscreen";
 import React from "react";
 
-export default function App() {}
+export default function App() {
+  const [screen, setScreen] = React.useState(1);
+  return screen === 1 ? <Startscreen state={setScreen} /> : <Gamescreen />;
+}
