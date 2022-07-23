@@ -1,0 +1,10 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.logo h1 {
+  color: #ffffff;
+  font-size: 3.6rem;
+}

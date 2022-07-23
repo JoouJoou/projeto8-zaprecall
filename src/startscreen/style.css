@@ -1,0 +1,22 @@
+main {
+  max-height: 31.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 14.8rem;
+  gap: 3rem;
+}
+
+main button {
+  background-color: #ffffff;
+  color: #d70900;
+  width: 24.6rem;
+  height: 5.4rem;
+  font-family: "Recursive", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid #d70900;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
