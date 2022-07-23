@@ -1,8 +1,10 @@
 import Turn from "../../../img/Turn.svg";
 import React from "react";
+import Cardsbutton from "./Cardsbutton/Cardsbutton";
 
-export default function Question({ question, setStateAnswer, stateAnswer }) {
-  return !stateAnswer ? (
+export default function Question({ question, setState, state }) {
+  const [answer, setAnswer] = React.useState(false);
+  return !answer ? (
     <li className="cards question">
       <div className="question-top">
         <p>{question.Q}</p>
@@ -11,7 +13,7 @@ export default function Question({ question, setStateAnswer, stateAnswer }) {
         <img
           src={Turn}
           onClick={() => {
-            setStateAnswer(true);
+            setAnswer(true);
           }}
         ></img>
       </div>
@@ -21,10 +23,25 @@ export default function Question({ question, setStateAnswer, stateAnswer }) {
       <div className="question-top">
         <p>{question.R}</p>
       </div>
-      <div className="question-bottom">
-        <button>Não Lembrei</button>
-        <button>Quase não lembrei</button>
-        <button>Zap!</button>
+      <div className="answer-bottom">
+        <Cardsbutton
+          name="Não lembrei"
+          className="button1"
+          setState={setState}
+          state={state}
+        />
+        <Cardsbutton
+          name="Quase não lembrei"
+          className="button2"
+          setState={setState}
+          state={state}
+        />
+        <Cardsbutton
+          name="Zap!"
+          className="button3"
+          setState={setState}
+          state={state}
+        />
       </div>
     </li>
   );

@@ -35,6 +35,11 @@
   justify-content: space-between;
   text-align: left;
   word-wrap: break-word;
+  font-size: 1.8rem;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
 }
 
 .question-top {
@@ -51,4 +56,11 @@
   width: 95%;
   display: flex;
   justify-content: flex-end;
+}
+
+.answer-bottom {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  margin-bottom: 0.4rem;
 }

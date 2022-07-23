@@ -43,52 +43,20 @@ function deck() {
 }
 deck();
 
-export default function Cardtable() {
-  console.log(gamedeck[0]);
-  const [card1, setCard1] = React.useState(false);
-  const [card2, setCard2] = React.useState(false);
-  const [card3, setCard3] = React.useState(false);
-  const [card4, setCard4] = React.useState(false);
-
-  const [answer1, setAnswer1] = React.useState(false);
-  const [answer2, setAnswer2] = React.useState(false);
-  const [answer3, setAnswer3] = React.useState(false);
-  const [answer4, setAnswer4] = React.useState(false);
-
+export default function Cardtable({ setState, state }) {
   return (
     <ul className="cardTable">
-      <Cards
-        setStateQuestion={setCard1}
-        setStateAnswer={setAnswer1}
-        stateQuestion={card1}
-        stateAnswer={answer1}
-        number={0}
-        question={gamedeck[0]}
-      ></Cards>
-      <Cards
-        setStateQuestion={setCard2}
-        setStateAnswer={setAnswer2}
-        stateQuestion={card2}
-        stateAnswer={answer2}
-        number={1}
-        question={gamedeck[1]}
-      ></Cards>
-      <Cards
-        setStateQuestion={setCard3}
-        setStateAnswer={setAnswer3}
-        stateQuestion={card3}
-        stateAnswer={answer3}
-        number={2}
-        question={gamedeck[2]}
-      ></Cards>
-      <Cards
-        setStateQuestion={setCard4}
-        setStateAnswer={setAnswer4}
-        stateQuestion={card4}
-        stateAnswer={answer4}
-        number={3}
-        question={gamedeck[3]}
-      ></Cards>
+      {gamedeck.map((value, index) => {
+        return (
+          <Cards
+            key={index}
+            number={index}
+            question={value}
+            setState={setState}
+            state={state}
+          />
+        );
+      })}
     </ul>
   );
 }

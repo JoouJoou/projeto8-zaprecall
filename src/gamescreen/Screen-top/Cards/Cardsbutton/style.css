@@ -1,0 +1,23 @@
+button {
+  border-radius: 0.5rem;
+  border: none;
+  width: 8.5rem;
+  height: 3.7rem;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #ff3030;
+}
+
+.button2 {
+  background-color: #ff922e;
+}
+
+.button3 {
+  background-color: #2fbe34;
+}
