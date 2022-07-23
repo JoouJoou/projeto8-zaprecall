@@ -1,22 +1,24 @@
 import Arrow from "../../../img/Vector.svg";
-import Turn from "../../../img/Turn.svg";
+import Question from "./Question";
 
-export default function Cards({ setState, state, number, question }) {
-  console.log(state);
-
-  return !state ? (
+export default function Cards({
+  setStateQuestion,
+  stateQuestion,
+  setStateAnswer,
+  stateAnswer,
+  number,
+  question,
+}) {
+  return !stateQuestion ? (
     <li className="cards">
       <p>Pergunta {number + 1}</p>
-      <img src={Arrow} onClick={() => setState(true)}></img>{" "}
+      <img src={Arrow} onClick={() => setStateQuestion(true)}></img>{" "}
     </li>
   ) : (
-    <li className="cards question">
-      <div className="question-top">
-        <p>{question.Q}</p>
-      </div>
-      <div className="question-bottom">
-        <img src={Turn}></img>
-      </div>
-    </li>
+    <Question
+      question={question}
+      setStateAnswer={setStateAnswer}
+      stateAnswer={stateAnswer}
+    />
   );
 }

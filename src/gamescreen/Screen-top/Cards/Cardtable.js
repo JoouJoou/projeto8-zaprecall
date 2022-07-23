@@ -50,29 +50,42 @@ export default function Cardtable() {
   const [card3, setCard3] = React.useState(false);
   const [card4, setCard4] = React.useState(false);
 
+  const [answer1, setAnswer1] = React.useState(false);
+  const [answer2, setAnswer2] = React.useState(false);
+  const [answer3, setAnswer3] = React.useState(false);
+  const [answer4, setAnswer4] = React.useState(false);
+
   return (
     <ul className="cardTable">
       <Cards
-        setState={setCard1}
-        state={card1}
+        setStateQuestion={setCard1}
+        setStateAnswer={setAnswer1}
+        stateQuestion={card1}
+        stateAnswer={answer1}
         number={0}
         question={gamedeck[0]}
       ></Cards>
       <Cards
-        setState={setCard2}
-        state={card2}
+        setStateQuestion={setCard2}
+        setStateAnswer={setAnswer2}
+        stateQuestion={card2}
+        stateAnswer={answer2}
         number={1}
         question={gamedeck[1]}
       ></Cards>
       <Cards
-        setState={setCard3}
-        state={card3}
+        setStateQuestion={setCard3}
+        setStateAnswer={setAnswer3}
+        stateQuestion={card3}
+        stateAnswer={answer3}
         number={2}
         question={gamedeck[2]}
       ></Cards>
       <Cards
-        setState={setCard4}
-        state={card4}
+        setStateQuestion={setCard4}
+        setStateAnswer={setAnswer4}
+        stateQuestion={card4}
+        stateAnswer={answer4}
         number={3}
         question={gamedeck[3]}
       ></Cards>
