@@ -1,0 +1,12 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fb6b6b;
+  font-family: "Righteous", cursive;
+  height: 100vh;
+}
+
+.root {
+  height: 100vh;
+}
