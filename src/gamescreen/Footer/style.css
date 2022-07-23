@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+  height: 7rem;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-family: "Recursive";
+  font-weight: 400;
+  font-size: 1.8rem;
+}

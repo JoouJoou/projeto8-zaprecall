@@ -1,0 +1,12 @@
+.header {
+  width: 25.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4.2rem auto 0 auto;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: 3.6rem;
+}
