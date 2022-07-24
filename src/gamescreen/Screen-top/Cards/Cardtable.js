@@ -43,7 +43,7 @@ function deck() {
 }
 deck();
 
-export default function Cardtable({ setState, state }) {
+export default function Cardtable({ setState }) {
   return (
     <ul className="cardTable">
       {gamedeck.map((value, index) => {
@@ -53,7 +53,6 @@ export default function Cardtable({ setState, state }) {
             number={index}
             question={value}
             setState={setState}
-            state={state}
           />
         );
       })}

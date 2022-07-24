@@ -1,10 +1,36 @@
 import Turn from "../../../img/Turn.svg";
 import React from "react";
-import Cardsbutton from "./Cardsbutton/Cardsbutton";
+import Wrong from "../../../img/wrong.svg";
+import Almostwrong from "../../../img/almostwrong.svg";
+import Zap from "../../../img/zap.svg";
 
-export default function Question({ question, setState, state }) {
+export default function Question({ question, setState, number }) {
   const [answer, setAnswer] = React.useState(false);
-  return !answer ? (
+  const [closed, setClosed] = React.useState(null);
+
+  const updateScore = (score) => {
+    setState((value) => [...value, score]);
+  };
+
+  return closed ? (
+    <li className="cards closed">
+      <p
+        className={(() => {
+          switch (closed) {
+            case Wrong:
+              return "wrong";
+            case Almostwrong:
+              return "almostwrong";
+            default:
+              return "zap";
+          }
+        })()}
+      >
+        Pergunta {number + 1}
+      </p>
+      <img src={closed}></img>
+    </li>
+  ) : !answer ? (
     <li className="cards question">
       <div className="question-top">
         <p>{question.Q}</p>
@@ -24,24 +50,33 @@ export default function Question({ question, setState, state }) {
         <p>{question.R}</p>
       </div>
       <div className="answer-bottom">
-        <Cardsbutton
-          name="Não lembrei"
+        <button
           className="button1"
-          setState={setState}
-          state={state}
-        />
-        <Cardsbutton
-          name="Quase não lembrei"
+          onClick={() => {
+            setClosed(Wrong);
+            updateScore("Wrong");
+          }}
+        >
+          Não lembrei
+        </button>
+        <button
           className="button2"
-          setState={setState}
-          state={state}
-        />
-        <Cardsbutton
-          name="Zap!"
+          onClick={() => {
+            setClosed(Almostwrong);
+            updateScore("Almostwrong");
+          }}
+        >
+          Quase não lembrei
+        </button>
+        <button
           className="button3"
-          setState={setState}
-          state={state}
-        />
+          onClick={() => {
+            setClosed(Zap);
+            updateScore("Zap");
+          }}
+        >
+          Zap!
+        </button>
       </div>
     </li>
   );

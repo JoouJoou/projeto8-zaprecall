@@ -6,13 +6,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: fixed;
   bottom: 0;
   left: 0;
+  gap: 1rem;
+}
+
+.endfooter {
+  height: 17.1rem;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer-top h1 {
+  margin-left: 0.5rem;
+}
+
+.footer > div {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .footer p {
   font-family: "Recursive";
   font-weight: 400;
   font-size: 1.8rem;
+}
+
+.footer h2 {
+  width: 22.2rem;
+  height: 4.4rem;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  word-wrap: break-word;
 }

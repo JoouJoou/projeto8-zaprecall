@@ -10,7 +10,6 @@ export default function Cards({
   number,
   question,
   setState,
-  state,
 }) {
   const [card, setCard] = React.useState(false);
   return !card ? (
@@ -24,7 +23,7 @@ export default function Cards({
       setStateAnswer={setStateAnswer}
       stateAnswer={stateAnswer}
       setState={setState}
-      state={state}
+      number={number}
     />
   );
 }

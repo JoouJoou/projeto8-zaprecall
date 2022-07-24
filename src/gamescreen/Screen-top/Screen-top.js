@@ -1,11 +1,11 @@
 import Cardtable from "./Cards/Cardtable";
 import Header from "./Header/Header";
 
-export default function Screentop({ setState, state }) {
+export default function Screentop({ setState }) {
   return (
     <div>
       <Header />
-      <Cardtable setState={setState} state={state} />
+      <Cardtable setState={setState} />
     </div>
   );
 }

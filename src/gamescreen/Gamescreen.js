@@ -4,11 +4,11 @@ import Screentop from "./Screen-top/Screen-top";
 import React from "react";
 
 export default function Gamescreen() {
-  const [button, setButton] = React.useState(null);
+  const [score, setScore] = React.useState([]);
   return (
     <div className="screen2">
-      <Screentop setState={setButton} state={button} />
-      <Footer setState={setButton} state={button} />
+      <Screentop setState={setScore} />
+      <Footer state={score} />
     </div>
   );
 }
