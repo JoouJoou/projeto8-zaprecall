@@ -5,7 +5,7 @@ import Zap from "../../img/zap.svg";
 import Sad from "../../img/sad7.svg";
 import Party from "../../img/party2.svg";
 
-export default function Endfooter({ state }) {
+export default function Endfooter({ state, setStateGame, setScore }) {
   return state.includes("Wrong") ? (
     <footer className="footer endfooter">
       <div className="footer-top">
@@ -26,6 +26,15 @@ export default function Endfooter({ state }) {
           }
         })}
       </div>
+      <button
+        className="restart"
+        onClick={() => {
+          setStateGame(1);
+          setScore([]);
+        }}
+      >
+        REINICIAR RECALL
+      </button>
     </footer>
   ) : (
     <footer className="footer endfooter">
@@ -47,6 +56,15 @@ export default function Endfooter({ state }) {
           }
         })}
       </div>
+      <button
+        className="restart"
+        onClick={() => {
+          setStateGame(1);
+          setScore([]);
+        }}
+      >
+        REINICIAR RECALL
+      </button>
     </footer>
   );
 }

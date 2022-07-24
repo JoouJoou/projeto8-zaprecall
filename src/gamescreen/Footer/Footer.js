@@ -4,9 +4,9 @@ import Almostwrong from "../../img/almostwrong.svg";
 import Zap from "../../img/zap.svg";
 import Endfooter from "./Endfooter";
 
-export default function Footer({ state }) {
+export default function Footer({ state, setStateGame, setScore }) {
   return state.length === 4 ? (
-    <Endfooter state={state} />
+    <Endfooter state={state} setStateGame={setStateGame} setScore={setScore} />
   ) : (
     <footer className="footer">
       <p>{state.length}/4 CONCLUÍDOS</p>
